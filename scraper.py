@@ -1,4 +1,4 @@
-#!/opt/miniconda3/envs/python2.7/bin/python
+#!/usr/bin/python3
 
 # D. B. Magers
 # 8.9.17
