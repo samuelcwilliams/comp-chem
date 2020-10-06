@@ -1,4 +1,4 @@
-#!/opt/miniconda3/envs/python2.7/bin/python
+#!/usr/bin/python3
 
 import fnmatch
 import argparse
@@ -89,7 +89,7 @@ try:
 					mppwidth=args['nslot'],
 					cmdline=commandline))
 except IOError as e:
-    print "Unable to create your script file."
+    print("Unable to create your script file.")
     sys.exit(1)
 
 # Load in program specific file
@@ -97,7 +97,7 @@ program = None
 try:
     program = Template(filename=(template_path+'%s.tmpl') % args['program'])
 except IOError as e:
-    print "Unable to open the program template file for the requested program."
+    print("Unable to open the program template file for the requested program.")
     sys.exit(1)
 
 script.write(program.render(nslot=args['nslot'],
